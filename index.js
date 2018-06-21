@@ -4,7 +4,7 @@ var app = require('express')();
 var server = require('http').Server(app);
 var bot = MessengerPlatform.create({
   pageID: '<your page id>',
-  appID: '<your app id>',
+  appID: '118602068794174',
   appSecret: '<your app secret>',
   validationToken: '<your validation token>',
   pageToken: '<your page token>'
@@ -13,4 +13,4 @@ app.use(bot.webhook('/webhook'));
 bot.on(MessengerPlatform.Events.MESSAGE, function(userId, message) {
 
 });
-server.listen(8080);
+server.listen(5253 || process.env.PORT);
