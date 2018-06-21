@@ -13,4 +13,8 @@ app.use(bot.webhook('/webhook'));
 bot.on(MessengerPlatform.Events.MESSAGE, function (userId, message) {
 console.log(userId + "=>" +message);
 });
+app.post("/slackwebhook",function(req,res){
+console.log(res);
+res.send("Hi");
+})
 server.listen(3000 || process.env.PORT);
