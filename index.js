@@ -16,6 +16,7 @@ bot.on(MessengerPlatform.Events.MESSAGE, function (userId, message) {
     console.log(userId + "=>" + message);
 });
 app.post("/slackwebhook", function (req, res) {
+    console.log(req.body);
     res.send(req.body.challenge);
 })
 server.listen(3000 || process.env.PORT);
