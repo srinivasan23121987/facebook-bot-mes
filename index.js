@@ -13,4 +13,4 @@ app.use(bot.webhook('/webhook'));
 bot.on(MessengerPlatform.Events.MESSAGE, function (userId, message) {
 console.log(userId + "=>" +message);
 });
-server.listen(5253 || process.env.PORT);
+server.listen(3000 || process.env.PORT);
