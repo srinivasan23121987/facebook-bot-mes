@@ -15,6 +15,9 @@ app.use(bodyParser.json());
 bot.on(MessengerPlatform.Events.MESSAGE, function (userId, message) {
     console.log(userId + "=>" + message);
 });
+app.get("/", function (req, res) {
+res.send("Welcome");
+})
 app.post("/slackwebhook", function (req, res) {
     console.log(req.body);
     res.send(req.body.challenge);
